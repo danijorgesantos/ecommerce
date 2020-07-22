@@ -1,0 +1,108 @@
+.product-page {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-content: space-between;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.product-page-section1 {
+    width: 80px;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.product-page-section2 {
+    width: 800px;
+    height: 600px;
+}
+
+.product-page-section3 {
+    width: 45%;
+    height: 100vh;
+}
+
+.product-page-preview-photo {
+    width: 60px;
+    height: 75px;
+    background-color: green;
+    margin: 10px;
+}
+
+.product-page-section3-container {
+    position: relative;
+    width: 426px;
+    height: 100vh;
+    background: white;
+}
+
+.product-page-section3-container-h1 {
+    font-size: 24px;
+    line-height: 1.6;
+    font-family: ProximaNova-Regular, Proxima-Nova, sans-serif;
+    color: #000;
+}
+
+.product-page-section3-container-h2 {
+    font-size: 16px;
+    line-height: 1.6;
+    font-family: ProximaNova-Regular, Proxima-Nova, sans-serif;
+    color: #000;
+    margin-bottom: 7px;
+}
+
+.product-page-section3-container-price {
+    width: 90%;
+    height: 24px;
+    border-bottom: 1px grey solid;
+    letter-spacing: 0;
+    font-weight: 300;
+    font-style: normal;
+    font-family: Genath-Regular, serif;
+    font-size: 15px;
+    line-height: 20px;
+    color: #000000;
+}
+
+.membership-upsell-container {
+    width: 100%;
+    height: 500px;
+    clear: both;
+    margin-bottom: 15px;
+    border-top: 1px solid #dddddd;
+    padding-top: 15px;
+}
+
+.add-to-bag-button {
+    width: 90%;
+    height: 44px;
+    border-radius: 2px;
+    font-family: EngraversGothic BT, sans-serif;
+    font-size: 12px;
+    border: none;
+    cursor: pointer;
+    outline: none;
+    text-align: center;
+    white-space: nowrap;
+    font-weight: 300;
+    letter-spacing: 2px;
+    line-height: 43px;
+    padding: 14px 130px;
+    text-transform: uppercase;
+    background: black;
+    color: white;
+}
+
+.membership-upsell-container-description {
+    width: 100%;
+    padding-top: 30px;
+    padding-bottom: 40px;
+}
+
+.membership-upsell-h3 {
+    line-height: 1.5;
+    font-size: 14px;
+}

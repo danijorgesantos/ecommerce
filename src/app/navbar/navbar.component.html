@@ -1,0 +1,150 @@
+<!-- <nav class="navbar-container">
+     <div class="navbar-section1">
+          <div class="navbar-section1-social">
+               <img src="../assets/face.svg"
+                    class="filter-green"
+                    width="20px"
+                    height="20px"
+                    alt="facebook" />
+               <img src="../assets/insta.svg"
+                    class="filter-green"
+                    width="20px"
+                    height="20px"
+                    alt="instagram" />
+               <img src="../assets/linked.svg"
+                    class="filter-green"
+                    width="20px"
+                    height="20px"
+                    alt="linkedin" />
+               <img src="../assets/twi.svg"
+                    class="filter-green"
+                    width="20px"
+                    height="20px"
+                    alt="twitter" />
+               <img src="../assets/you.svg"
+                    class="filter-green"
+                    width="20px"
+                    height="20px"
+                    alt="youtube" />
+          </div>
+          <div class="navbar-section1-title">
+               <h2 class="navbar-title">DC Digital</h2>
+          </div>
+          <div class="navbar-section1-account">
+               <div *ngIf="loginOn">
+               <div style="width: 30px; height:30px;">
+                    <div routerLink="/checkout"
+                         style='
+                  width:"20px";
+                  height:"20px";
+                  margin-right:20px;
+                  -webkit-background-size: cover;
+                  -moz-background-size: cover;
+                  -o-background-size: cover;
+                  background-size: cover;
+                  background-repeat: no-repeat;
+                  background-position: center;
+                  background-image: url(../../assets/communications.svg);'
+                         alt="pname">
+                         <div class="cart-ball">
+                              <p class="p-color-white">{{count}}</p>
+                         </div>
+                    </div>
+               </div>
+                    <a class="btn-2"
+                       (click)="logout()">Logout</a>
+               </div>
+               <div *ngIf="!loginOn">
+                    <a class="btn-1"
+                       routerLink="/login">Login</a>
+                    <a class="btn-2"
+                       routerLink="/register">Register</a>
+               </div>
+          </div>
+     </div>
+     <div class="navbar-section2">
+          <a class="navbar-link"
+             routerLink="/">Home</a>
+          <a class="navbar-link"
+             routerLink="/">Category</a>
+          <a class="navbar-link"
+             routerLink="/">Latest</a>
+          <a class="navbar-link"
+             routerLink="/">Pages</a>
+          <a class="navbar-link"
+             routerLink="/">Contact</a>
+     </div>
+</nav> -->
+
+<!-- <nav>
+     <div class="topnav">
+          <a *ngFor='let collection of this.collections' [routerLink]="['' , collection.collectionUrl]">{{collection.collectionName}}</a>
+     </div>
+</nav> -->
+
+<nav class="nav-container">
+     <div>
+       <h1 class="nav-title">Inverte Online Shop</h1>
+     </div>
+     <div class="nav-collections">
+          <a class="nav-links" *ngFor='let collection of this.collections' [routerLink]="['' , collection.collectionUrl]">{{collection.collectionName}}</a>
+     </div>
+     <div class="navbar-section1-social">
+          <img src="../assets/face.svg"
+               class="filter-green"
+               width="20px"
+               height="20px"
+               alt="facebook" />
+          <img src="../assets/insta.svg"
+               class="filter-green"
+               width="20px"
+               height="20px"
+               alt="instagram" />
+          <img src="../assets/linked.svg"
+               class="filter-green"
+               width="20px"
+               height="20px"
+               alt="linkedin" />
+          <img src="../assets/twi.svg"
+               class="filter-green"
+               width="20px"
+               height="20px"
+               alt="twitter" />
+          <img src="../assets/you.svg"
+               class="filter-green"
+               width="20px"
+               height="20px"
+               alt="youtube" />
+     </div>
+     <div class="navbar-section1-account">
+          <div *ngIf="loginOn">
+          <div style="width: 30px; height:30px;">
+               <div routerLink="/checkout"
+                    style='
+             width:"20px";
+             height:"20px";
+             margin-right:20px;
+             -webkit-background-size: cover;
+             -moz-background-size: cover;
+             -o-background-size: cover;
+             background-size: cover;
+             background-repeat: no-repeat;
+             background-position: center;
+             background-image: url(../../assets/communications.svg);'
+                    alt="pname">
+                    <div class="cart-ball">
+                         <p class="p-color-white">{{count}}</p>
+                    </div>
+               </div>
+          </div>
+               <a class="btn-2"
+                  (click)="logout()">Logout</a>
+          </div>
+          <div *ngIf="!loginOn">
+               <a class="btn-1"
+                  routerLink="/login">Login</a>
+               <a class="btn-2"
+                  routerLink="/register">Register</a>
+          </div>
+     </div>
+</nav>

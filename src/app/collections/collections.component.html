@@ -1,0 +1,12 @@
+<div *ngIf="loading"
+     class="admin-menu-products-colections-load">
+    <img height="150"
+         width="150"
+         src="/assets/load.gif" />
+</div>
+<div class="cards"
+     *ngIf="!loading">
+
+    <app-collection-card *ngFor='let collection of this.collections'
+                         [collection]="collection">
+    </app-collection-card>

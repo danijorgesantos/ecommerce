@@ -1,0 +1,80 @@
+.checkout-container {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+
+    .checkout-section-1 {
+        width: 49%;
+        height: 100%;
+        background: #f8f8f8;
+        display: flex;
+        justify-content: center;
+    }
+
+    .checkout-section-2 {
+        width: 49%;
+        height: 100%;
+        background: white;
+    }
+
+    .product-box {
+        width: 80%;
+        height: auto;
+    }
+
+    .checkout-title-margin-top {
+        margin-top: 100px;
+    }
+
+    .checkout-form-section2 {
+        width:50%;
+        height:100%;
+    }
+
+    .admin-page-authentication-container-box {
+        background: #fff;
+        width: 100%;
+        height: 100%;
+        border-radius: 4px;
+    }
+
+    .admin-page-authentication-container-box-top-input-button {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .admin-page-authentication-company {
+        font-size: medium;
+        font-weight: bold;
+    }
+
+    .add-to-bag-button {
+        width: 90%;
+        height: 44px;
+        border-radius: 2px;
+        font-family: EngraversGothic BT, sans-serif;
+        font-size: 12px;
+        border: none;
+        cursor: pointer;
+        outline: none;
+        text-align: center;
+        white-space: nowrap;
+        font-weight: 300;
+        letter-spacing: 2px;
+        line-height: 43px;
+        padding: 14px 130px;
+        text-transform: uppercase;
+        background: black;
+        color: white;
+    }
+
+    .membership-upsell-container-description {
+        width: 100%;
+        padding-top: 30px;
+        padding-bottom: 40px;
+    }
+}

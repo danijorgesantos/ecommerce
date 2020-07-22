@@ -1,0 +1,121 @@
+<div class="back-container">
+  <div class='back'>
+    <a routerLink='/'
+       class="news-article-router"><i class="left"></i> Back to our Products</a>
+  </div>
+</div>
+
+<div class="product-page">
+  <div class="product-page-section1">
+
+    <div class="product-page-preview-photo"
+         style='
+    border-radius:18px;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-color: white;
+    background-position: center;'
+         [style.background-image]="'url('+product.mainPhoto1+')'"
+         alt="pname"></div>
+
+    <div class="product-page-preview-photo"
+         style='
+      border-radius:18px;
+      -webkit-background-size: cover;
+      -moz-background-size: cover;
+      -o-background-size: cover;
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-color: white;
+      background-position: center;'
+         [style.background-image]="'url('+product.mainPhoto2+')'"
+         alt="pname"></div>
+
+    <div class="product-page-preview-photo"
+         style='
+        border-radius:18px;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-color: white;
+        background-position: center;'
+         [style.background-image]="'url('+product.mainPhoto3+')'"
+         alt="pname"></div>
+
+    <div class="product-page-preview-photo"
+         style='
+          border-radius:18px;
+          -webkit-background-size: cover;
+          -moz-background-size: cover;
+          -o-background-size: cover;
+          background-size: cover;
+          background-repeat: no-repeat;
+          background-color: white;
+          background-position: center;'
+         [style.background-image]="'url('+product.mainPhoto4+')'"
+         alt="pname"></div>
+
+    <div class="product-page-preview-photo"
+         style='
+            border-radius:10px;
+            -webkit-background-size: cover;
+            -moz-background-size: cover;
+            -o-background-size: cover;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-color: white;
+            background-position: center;'
+         [style.background-image]="'url('+product.mainPhoto5+')'"
+         alt="pname"></div>
+
+    <div class="product-page-preview-photo"
+         style='
+              border-radius:10px;
+              -webkit-background-size: cover;
+              -moz-background-size: cover;
+              -o-background-size: cover;
+              background-size: cover;
+              background-repeat: no-repeat;
+              background-color: white;
+              background-position: center;'
+         [style.background-image]="'url('+product.mainPhoto6+')'"
+         alt="pname"></div>
+
+  </div>
+
+  <div class="product-page-section2"
+       style='
+  border-radius:18px;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-color: #cccccc;
+  background-position: center;'
+       [style.background-image]="'url('+product.mainPhoto1+')'"
+       alt="pname"></div>
+
+  <div class="product-page-section3">
+    <div class="product-page-section3-container">
+      <h1 class="product-page-section3-container-h1">{{product.name}}</h1>
+      <h2 class="product-page-section3-container-h2">{{product.description}}</h2>
+      <div class="product-page-section3-container-price">
+        {{ product.price | currency:'EUR':true }} Retail
+      </div>
+      <div class="membership-upsell-container">
+        <div class="membership-upsell-container-description">
+          <h3 class="membership-upsell-h3">
+            {{ product.detailedDescription }}
+          </h3>
+        </div>
+        <a (click)="addToBag()" class="add-to-bag-button">add to bag</a>
+      </div>
+    </div>
+  </div>
+</div>

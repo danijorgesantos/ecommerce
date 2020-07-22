@@ -1,0 +1,182 @@
+.login-form-container {
+    width: 100vw;
+    height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.login-form-center-white {
+    width: 90vw;
+    height: 75vh;
+    background: white;
+    border-radius: 2px;
+}
+
+.login-form-center-white {
+    display: flex;
+    flex-direction: row;
+}
+
+.login-form-section1 {
+    width: 50%;
+    height: 100%;
+    background: url("https://images.unsplash.com/photo-1515964428478-4419ea9ea1b2?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=713&q=80");
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.login-form-section2 {
+    width:50%;
+    height:100%;
+}
+
+.auth-points-p {
+    font-size: 12px;
+    color: white;
+    text-align: center;
+}
+
+.auth-points-h3 {
+    font-size: 16px;
+    color: white;
+    text-align: center;
+}
+
+.auth-points-h4 {
+    font-size: 14px;
+    color: white;
+    text-align: center;
+}
+
+.admin-page-authentication-container {
+    background: #27276b; /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #22225d, #27276b); /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(
+        to right,
+        #22225d,
+        #27276b
+    ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.admin-page-authentication-container-box {
+    background: #fff;
+    width: 100%;
+    height: 100%;
+    border-radius: 4px;
+}
+
+.admin-page-authentication-container-box-top {
+    width: 100%;
+    height: 50%;
+    background: url("https://images.unsplash.com/photo-1449824913935-59a10b8d2000?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80")
+        no-repeat center center fixed;
+    background-size: cover;
+    overflow: hidden;
+}
+
+.admin-menu-products-colections-product-input {
+    width: 80%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.admin-page-authentication-container-box-top-input-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.admin-page-authentication-button {
+    background: #27276b; /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #294095, #174d96); /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(
+        to right,
+        #294095,
+        #174d96
+    ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    color: white;
+    padding: 6px 25px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    margin-right: 20px;
+    margin-left: 20px;
+    border-radius: 2px;
+}
+
+.admin-page-authentication-company {
+    color: #174d96;
+    font-size: medium;
+    font-weight: bold;
+}
+
+//---------------------------------------------------------------------------------------------------------------------------
+
+.admin-menu-products-colections-product-outside-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+    margin-bottom: 100px;
+    background-color: #f1f6f6;
+}
+
+.admin-menu-products-colections-product-container {
+    width: 90%;
+    background: white;
+    min-height: 600px;
+    border-color: #eaeaea;
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 8px;
+}
+
+.admin-menu-products-colections-product-container-header {
+    width: 100%;
+    height: 60px;
+    border-bottom: 0.2px solid grey;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.admin-menu-products-colections-product-container-margins {
+    width: 80%;
+    height: auto;
+}
+
+.admin-menu-products-colections-product-container-margins-flex {
+    display: flex;
+    justify-content: center;
+}
+
+.admin-menu-products-colections-product-container-background {
+    background: #f4f7f8;
+    width:100%;
+    max-width: 100%;
+    height: auto;
+    min-height: 100vh;
+}
+
+.login-dont-have-account {
+    color: #0076ff;
+    cursor: pointer;
+}
+
+

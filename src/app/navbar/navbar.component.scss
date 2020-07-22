@@ -1,0 +1,142 @@
+.navbar-container {
+    position: fixed;
+    top: 0;
+    background: white;
+    z-index: 99999;
+    width: 100%;
+}
+
+.navbar-section1 {
+    width: 100%;
+    height: 90px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.navbar-section1-social {
+    width: 250px;
+    height: 30px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.navbar-section1-account {
+    width: 250px;
+    height: 30px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.navbar-link {
+    padding: 14px 25px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    transition: 1s;
+    border-radius: 10px;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.navbar-link:hover {
+    border-radius: 8px;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.navbar-section2 {
+    width: 100%;
+    height: 37px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    box-shadow: 0 2px 2px -2px rgba(0, 0, 0, 0.2);
+    border-bottom: 1px solid lightgrey;
+    border-top: 1px solid lightgrey;
+}
+
+.navbar-title {
+    font-size: 40px;
+    color: cornflowerblue;
+}
+
+.cart-ball {
+    margin-left: 50%;
+    background: #e43a15; /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #e65245, #e43a15); /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(
+        to right,
+        #e65245,
+        #e43a15
+    ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.p-color-white {
+    font-size: 10px;
+    color: white;
+    font-weight: bold;
+}
+
+//------------------------------------------------------------------------------------------------------------------------------------------------------
+
+.nav-container {
+    width: 100%;
+    height: 50px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background: #202020; /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #303030, #202020); /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(
+        to right,
+        #303030,
+        #202020
+    ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    position: fixed;
+    top: 0;
+    overflow: hidden;
+    z-index: 99999;
+}
+
+.a:hover a.active {
+    background-color: #4caf50;
+    color: white;
+}
+.nav-collections {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-title {
+    text-decoration: none;
+    color: rgba(255, 255, 255, 0.7);
+    margin-left: 8px;
+}
+
+.nav-links {
+    text-decoration: none;
+    color: rgba(255, 255, 255, 0.7);
+    margin-left: 12px;
+    text-decoration: none;
+    font-size: 17px;
+    cursor: pointer;
+}
+
+.nav-links:hover {
+    color: white;
+}

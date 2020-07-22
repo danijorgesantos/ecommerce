@@ -1,0 +1,283 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+    font-family: "Roboto", sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    color: #323232;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+    display: block;
+}
+body {
+    line-height: 1;
+}
+ol,
+ul {
+    list-style: none;
+}
+blockquote,
+q {
+    quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+    content: "";
+    content: none;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+.cards {
+    display: flex;
+    align-content: space-between;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin-bottom: 70px;
+    margin-top: 70px;
+    margin-left: 100px;
+    margin-right: 100px;
+}
+
+.site-page-padding {
+    padding-right: 5%;
+    padding-left: 5%;
+}
+
+.back {
+    color: lightgrey;
+    line-height: 14px;
+    font-size: 14px !important;
+    margin-right: 3vw;
+
+    i {
+        border: solid lightgrey;
+        border-width: 0 1px 1px 0;
+        display: inline-block;
+        padding: 3px;
+    }
+
+    .left {
+        transform: rotate(135deg);
+        -webkit-transform: rotate(135deg);
+    }
+
+    a {
+        outline: none;
+        text-decoration: none;
+        color: lightgrey;
+    }
+}
+
+.back-container {
+    width: 100%;
+    height: 40px;
+    padding: 10px;
+}
+
+//------------------ butoes app
+
+.app-button {
+    background-color: #6495ed;
+    color: white;
+    padding: 14px 25px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    border-radius: 20px;
+    transition: 2s;
+    margin: 10px;
+    cursor: pointer;
+}
+
+#app-button {
+    transition-timing-function: ease-out;
+}
+
+.app-button:hover {
+    padding: 15px 26px;
+    border-radius: 21px;
+    font-weight: 900;
+}
+
+.btn-1 {
+    border: 1px solid #0076ff;
+    line-height: 1.125rem;
+    color: #0076ff;
+    background-color: transparent;
+    cursor: pointer;
+    font-size: 0.875rem;
+    text-align: center;
+    font-weight: 700;
+    padding: 10px 30px;
+    text-decoration: none;
+    -webkit-appearance: none;
+    border-radius: 6px;
+    transition: background-color 0.15s cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+
+.btn-1:hover {
+    color: white;
+    background-color: #006ae6;
+}
+
+.btn-2 {
+    margin-right: 0;
+    margin-left: 15px;
+    color: #fff;
+    background-color: #0076ff;
+    cursor: pointer;
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+    text-align: center;
+    font-weight: 700;
+    padding: 10px 30px;
+    text-decoration: none;
+    -webkit-appearance: none;
+    border-radius: 6px;
+    border-width: 0;
+    transition: background-color 0.15s cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+
+.btn-2:hover {
+    color: white;
+    background-color: #006ae6;
+}
+
+.font-size-small {
+    font-size: small;
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+}
+
+.app-input {
+    background: rgba(255, 255, 255, 0.1);
+    border: none;
+    border-radius: 4px;
+    font-size: 15px;
+    margin: 0;
+    outline: 0;
+    padding: 10px;
+    width: 100%;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    background-color: #e8eeef;
+    color: #8a97a0;
+    -webkit-box-shadow: 0 1px 0 rgba(0, 0, 0, 0.03) inset;
+    box-shadow: 0 1px 0 rgba(0, 0, 0, 0.03) inset;
+    margin-bottom: 30px;
+}
+
+.app-input-label {
+    margin-bottom: 100px;
+    font-size: medium;
+    color: grey;
+}

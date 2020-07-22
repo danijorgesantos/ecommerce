@@ -1,0 +1,60 @@
+<div class="login-form-container">
+    <div class="login-form-center-white">
+      <div class="login-form-section1">
+      </div>
+      <div class="login-form-section2">
+        <!-- this form------------------------------------------------------------------------------------ -->
+        <div class="admin-page-authentication-container-box">
+          <form [formGroup]="loginForm"
+                (ngSubmit)="onSubmit()">
+            <div class="admin-page-authentication-container-box-top-input-button">
+              <br>
+              <br>
+              <h2 class="admin-page-authentication-company">DC Digital Create Account</h2>
+              <br>
+
+              <div style="width:80%; height:auto;">
+                <label class="app-input-label">First and Last Name</label>
+                <input autocomplete="on"
+                       type="text"
+                       formControlName="name"
+                       class="app-input">
+              </div>
+  
+              <div style="width:80%; height:auto;">
+                <label class="app-input-label">Email</label>
+                <input autocomplete="on"
+                       type="text"
+                       formControlName="email"
+                       class="app-input">
+              </div>
+  
+              <div style="width:80%; height:auto;">
+                <label class="app-input-label">Password</label>
+                <input autocomplete="on"
+                       type="password"
+                       formControlName="password"
+                       class="app-input">
+              </div>
+
+              <div style="width:80%; height:auto;">
+                <label class="app-input-label">Confirm Password</label>
+                <input autocomplete="on"
+                       type="password"
+                       formControlName="confirmPassword"
+                       class="app-input">
+              </div>
+              <a class="btn-2"
+                 (click)="onSubmit()">Create Account</a>
+            </div>
+          </form>
+          <br>
+          <br>
+          <div class="font-size-small row">
+            <h4>Already have an account?</h4><span routerLink="/login" class="login-dont-have-account">Login here</span>
+          </div>
+        </div>
+        <!-- this form------------------------------------------------------------------------------------ -->
+      </div>
+    </div>
+  </div>

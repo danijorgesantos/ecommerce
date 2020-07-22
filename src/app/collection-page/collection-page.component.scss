@@ -1,0 +1,40 @@
+
+.collection-container {
+    width:100%;
+    height: 500px;
+    border: 1px solid #EAEAEA;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-color: #cccccc;
+    background-position: center;
+    transition: width 1s, height 2s, background 2s;
+    cursor: pointer;
+  }
+  
+  
+  .collection-container-section1 {
+    width:100%;
+    height: 100%;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .collection-container-section2 {
+    width:100%;
+    height:20%;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .collection-name {
+    font-size: 6vw;
+    font-weight: bold;
+  }
+
+  .p-color-white {
+    color:white;
+  }

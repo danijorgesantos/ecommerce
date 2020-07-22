@@ -1,0 +1,45 @@
+fazer uma div 100% para o loading da product page
+
+fazer uma checkout page
+
+fazer slider para imagens
+
+fazer formulário para fazer pedido para comprar e meter no mongoDb
+
+arranjar os products cards do index
+
+meter a product page a funcionar para todas as media width
+
+mudar icons para a cor do texto do saleor
+
+meter uma seta em baixo para levar o site para cima
+
+resolver o problema do registo, depois de te registeres a navbar nao actualiza, usar um serviço ou redux.
+
+acabar a pagina de registration-success FE, phone tablet desktop
+
+fazer uma account page
+
+fazer um cart page
+
+
+
+user : {
+    productsInCart: []
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+***** importante ****** fazer autenticação funcionar direito

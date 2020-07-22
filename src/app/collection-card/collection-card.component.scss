@@ -1,0 +1,46 @@
+
+.collection-container {
+    width:400px;
+    height: 250px;
+    border: 1px solid #EAEAEA;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-color: #cccccc;
+    background-position: center;
+    border-radius: 8px;
+    transition: width 1s, height 2s, background 2s;
+    cursor: pointer;
+  }
+  
+  .collection-container:hover {
+    width:420px;
+    height:260px;
+  }
+  
+  
+  .collection-container-section1 {
+    width:100%;
+    height: 100%;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .collection-container-section2 {
+    width:100%;
+    height:20%;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .collection-name {
+    font-size: 30px;
+    font-weight: bold;
+  }
+
+  .p-color-white {
+    color:white;
+  }

@@ -1,0 +1,68 @@
+<div class="checkout-container">
+    <div class="checkout-section-1">
+        <div class="product-box">
+            <h2 class="checkout-title-margin-top">Total</h2>
+
+            <h3>$60,00</h3>
+
+            <p>{{userProducts.length}} articles</p>
+
+            <app-checkout-product-card></app-checkout-product-card>
+            <app-checkout-product-card></app-checkout-product-card>
+            <app-checkout-product-card></app-checkout-product-card>
+
+        </div>
+    </div>
+    <!-- this form------------------------------------------------------------------------------------ -->
+    <div class="checkout-form-section2">
+        <div class="admin-page-authentication-container-box">
+          <form [formGroup]="loginForm"
+                (ngSubmit)="onSubmit()">
+            <div class="admin-page-authentication-container-box-top-input-button">
+              <br>
+              <br>
+              <h2 class="admin-page-authentication-company checkout-title-margin-top">Checkout the {{userProducts.length}} items in your cart</h2>
+              <br>
+
+              <div style="width:80%; height:auto;">
+                <label class="app-input-label">Name</label>
+                <input autocomplete="on"
+                       type="text"
+                       formControlName="name"
+                       class="app-input">
+              </div>
+  
+              <div style="width:80%; height:auto;">
+                <label class="app-input-label">Email</label>
+                <input autocomplete="on"
+                       type="text"
+                       formControlName="email"
+                       class="app-input">
+              </div>
+
+              <div style="width:80%; height:auto;">
+                <label class="app-input-label">Phone</label>
+                <input autocomplete="on"
+                       type="text"
+                       formControlName="phone"
+                       class="app-input">
+              </div>
+
+              <div style="width:80%; height:auto;">
+                <label class="app-input-label">Address</label>
+                <input autocomplete="on"
+                       type="text"
+                       formControlName="address"
+                       class="app-input">
+              </div>
+              <div class="membership-upsell-container">
+                  <a class="add-to-bag-button">checkout items</a>
+              </div>
+            </div>
+          </form>
+          <br>
+          <br>
+        </div>
+    </div>
+    <!-- this form------------------------------------------------------------------------------------ -->
+</div>

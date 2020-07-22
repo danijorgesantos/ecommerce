@@ -1,0 +1,44 @@
+<div class="login-form-container">
+  <div class="login-form-center-white">
+    <div class="login-form-section1">
+    </div>
+    <div class="login-form-section2">
+      <!-- this form------------------------------------------------------------------------------------ -->
+      <div class="admin-page-authentication-container-box">
+        <form [formGroup]="loginForm"
+              (ngSubmit)="onSubmit()">
+          <div class="admin-page-authentication-container-box-top-input-button">
+            <br>
+            <br>
+            <h2 class="admin-page-authentication-company">DC Digital Login Page</h2>
+            <br>
+
+            <div style="width:80%; height:auto;">
+              <label class="app-input-label">Email</label>
+              <input autocomplete="on"
+                     type="text"
+                     formControlName="email"
+                     class="app-input">
+            </div>
+
+            <div style="width:80%; height:auto;">
+              <label class="app-input-label">Password</label>
+              <input autocomplete="on"
+                     type="password"
+                     formControlName="password"
+                     class="app-input">
+            </div>
+            <a class="btn-2"
+               (click)="onSubmit()">Login</a>
+          </div>
+        </form>
+        <br>
+        <br>
+        <div class="font-size-small row">
+          <h4>Dont have an account?</h4><span routerLink="/register" class="login-dont-have-account">Create one here</span>
+        </div>
+      </div>
+      <!-- this form------------------------------------------------------------------------------------ -->
+    </div>
+  </div>
+</div>

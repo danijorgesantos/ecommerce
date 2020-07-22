@@ -1,0 +1,24 @@
+<div class="product-card-container">
+  <div [routerLink]="['' , collectionUrl, product.url]"
+    style='
+    border-radius:18px;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height:70%;
+    width:100%;
+    background-color: #cccccc;
+    background-position: center;'
+    [style.background-image]="'url('+product.mainPhoto1+')'"
+      alt="pname"></div>
+    <div class="card-section2">
+      <p>*****</p>
+      <h3>{{product.name}}</h3>
+      <div class="section2-prices">
+      <p>{{ product.price | currency:'EUR':true }}</p>
+      <p>$40.00</p>
+      </div>
+    </div>
+</div>
