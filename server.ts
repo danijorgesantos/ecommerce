@@ -11,14 +11,12 @@ import { existsSync } from 'fs';
 // local Storage for angular universal
 import 'localstorage-polyfill';
 
-import mongoose from 'mongoose';
-import passport from 'passport';
-
 // The Express app is exported so that it can be used by serverless Functions.
 export function app() {
   const server = express();
+  const mongoose = require('mongoose');
   const bodyParser = require('body-parser');
-
+  const passport = require('passport');
   const distFolder = join(process.cwd(), 'dist/ecommerce/browser');
   const indexHtml = existsSync(join(distFolder, 'index.original.html')) ? 'index.original.html' : 'index';
 
