@@ -2,6 +2,8 @@
 
 ## To Run: npm run lo
 
+![alt text](https://github.com/danijorgesantos/ecommerce/blob/master/main.PNG?raw=true)
+
 
 ### An ecommerce shop
 
