@@ -1,0 +1,12 @@
+<div class="collection-container"
+     [style.background-image]="'url('+collection.collectionPhoto+')'">
+    <div class="collection-container-section1">
+        <p class="collection-name p-color-white ">{{collection.collectionName}}</p>
+    </div>
+</div>
+
+<div class="cards">
+    <div *ngFor='let product of collectionProducts'>
+        <app-product-card [product]="product" [collectionUrl]="this.collectionUrl"></app-product-card>
+    </div>
+</div>
