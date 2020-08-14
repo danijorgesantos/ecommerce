@@ -7,12 +7,13 @@ import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
 import { CollectionPageComponent } from './collection-page/collection-page.component';
 import { CheckoutPageComponent } from './checkout-page/checkout-page.component';
+import { Main } from './main/main.component';
 
 
 const routes: Routes = [
   {
     path: '',
-    component: IndexComponent
+    component: Main
   },
   {
     path: 'login', component: LoginComponent

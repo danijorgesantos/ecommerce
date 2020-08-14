@@ -22,6 +22,7 @@ import { CollectionCardComponent } from './collection-card/collection-card.compo
 import { CollectionPageComponent } from './collection-page/collection-page.component';
 import { CheckoutPageComponent } from './checkout-page/checkout-page.component';
 import { CheckoutProductCardComponent } from './checkout-product-card/checkout-product-card.component';
+import { Main } from './main/main.component';
 
 @NgModule({
   declarations: [
@@ -37,7 +38,8 @@ import { CheckoutProductCardComponent } from './checkout-product-card/checkout-p
     CollectionCardComponent,
     CollectionPageComponent,
     CheckoutPageComponent,
-    CheckoutProductCardComponent
+    CheckoutProductCardComponent,
+    Main
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'serverApp' }),
