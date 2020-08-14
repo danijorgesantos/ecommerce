@@ -23,6 +23,7 @@ import { CollectionPageComponent } from './collection-page/collection-page.compo
 import { CheckoutPageComponent } from './checkout-page/checkout-page.component';
 import { CheckoutProductCardComponent } from './checkout-product-card/checkout-product-card.component';
 import { Main } from './main/main.component';
+import { MainPageProductsComponent } from './main-page-products/main-page-products.component';
 
 @NgModule({
   declarations: [
@@ -39,7 +40,8 @@ import { Main } from './main/main.component';
     CollectionPageComponent,
     CheckoutPageComponent,
     CheckoutProductCardComponent,
-    Main
+    Main,
+    MainPageProductsComponent
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'serverApp' }),

@@ -1,0 +1,5 @@
+<div class="cards">
+    <div *ngFor='let product of collectionProducts'>
+        <app-product-card [product]="product" [collectionUrl]="this.collectionUrl"></app-product-card>
+    </div>
+</div>

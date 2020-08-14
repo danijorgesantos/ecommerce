@@ -28,7 +28,7 @@ export class CollectionsComponent implements OnInit {
       .subscribe(
         data => {
           if (data) {
-            console.log(data)
+            console.log(data);
             this.collections = data;
             this.loading = false;
           }

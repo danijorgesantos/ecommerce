@@ -4,7 +4,6 @@ import { throwError } from 'rxjs';
 import { catchError, retry } from 'rxjs/operators';
 import { BehaviorSubject, Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
-//import { User } from '../_models/user';
 
 @Injectable({ providedIn: 'root' })
 export class ProductService {
