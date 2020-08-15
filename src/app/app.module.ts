@@ -25,6 +25,12 @@ import { CheckoutProductCardComponent } from './checkout-product-card/checkout-p
 import { Main } from './main/main.component';
 import { MainPageProductsComponent } from './main-page-products/main-page-products.component';
 
+import { StoreModule } from '@ngrx/store';
+import { RootStoreModule } from './root-store/root-store.module';
+
+import { StoreDevtoolsModule } from '@ngrx/store-devtools';
+import { environment } from '../environments/environment';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -49,7 +55,10 @@ import { MainPageProductsComponent } from './main-page-products/main-page-produc
     ReactiveFormsModule,
     HttpClientModule,
     FormsModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    StoreModule.forRoot({}, {}),
+    RootStoreModule,
+    StoreDevtoolsModule.instrument({ maxAge: 25, logOnly: environment.production })
   ],
   providers: [
     { provide: HTTP_INTERCEPTORS, useClass: JwtInterceptor, multi: true },
