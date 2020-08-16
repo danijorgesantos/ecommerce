@@ -14,13 +14,6 @@
        [style.background-image]="'url('+product.mainPhoto1+')'"
        alt="pname"></div>
   <div class="card-section2">
-    <div class="stars">
-      <span class="fa fa-star checked starts_single"></span>
-      <span class="fa fa-star checked starts_single"></span>
-      <span class="fa fa-star checked starts_single"></span>
-      <span class="fa fa-star checked starts_single"></span>
-      <span class="fa fa-star checked starts_single"></span>
-    </div>
     <div class="section2-prices">
       <h3 class="product-title">{{product.name}}</h3>
       <div *ngIf="product.price === '0'">
