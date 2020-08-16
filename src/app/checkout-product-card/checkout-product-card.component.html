@@ -1,9 +1,9 @@
 <div class="checkout-product-card">
-    <div class="pic"></div>
+    <div class="pic" [style.background-image]="'url('+product.mainPhoto1+')'"></div>
     <div class="title">
-        das asd sa ddas sad
+        {{product.name}}
     </div>
     <div class="price">
-        12$
+        <p>{{ product.price | currency:'EUR':true }}</p>
     </div>
 </div>

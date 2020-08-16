@@ -85,6 +85,7 @@ router.post('/addProductToUserCart', (req, res) => {
 router.post('/login', (req, res) => {
     const password = req.body.password;
     const email = req.body.email;
+    console.log(req.body)
     User.findOne({
         email
     })

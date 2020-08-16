@@ -32,6 +32,17 @@
     align-items: center;
 }
 
+.navbar__section1--loggedin {
+    width: 250px;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+
+
 .navbar-link {
     padding: 14px 25px;
     text-align: center;
@@ -125,7 +136,7 @@
 .nav-title {
     text-decoration: none;
     color: rgba(255, 255, 255, 0.7);
-    margin-left: 8px;
+    margin-left: 20px;
 }
 
 .nav-links {

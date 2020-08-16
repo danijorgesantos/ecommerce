@@ -3,31 +3,18 @@ import { featureAdapter, initialState, State } from './state';
 
 export function featureReducer(state = initialState, action: Actions): State {
     switch (action.type) {
-        case ActionTypes.INCREMENT: {
+        case ActionTypes.USER_LOGIN: {
             return {
                 ...state,
-                count: state.count + 1
+                loggedin: true
             };
         }
-        case ActionTypes.DECREMENT: {
+        case ActionTypes.ADD_PRODUCT: {
             return {
                 ...state,
-                count: state.count - 1
+                shoppingCart: [...state.shoppingCart, action.payload]
             };
         }
-        case ActionTypes.RESET: {
-            return {
-                ...state,
-                count: 0
-            };
-        }
-        // case ActionTypes.LOAD_SUCCESS: {
-        //     return featureAdapter.addAll(action.payload.items, {
-        //         ...state,
-        //         isLoading: false,
-        //         error: null
-        //     });
-        // }
         default: {
             return state;
         }

@@ -15,7 +15,6 @@ export class AuthenticationService {
     currentMessage = this.messageSource.asObservable();
 
     changeMessage(message) {
-        console.log('service message change', message);
         this.messageSource.next(message);
     }
 

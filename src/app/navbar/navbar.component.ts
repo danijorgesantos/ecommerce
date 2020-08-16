@@ -7,11 +7,14 @@ import { debounce } from 'rxjs/operators';
 import { CollectionService } from '../_services/collection.service';
 import { AuthenticationService } from '../_services/authentication.service';
 
+import { NavbarFacade } from './navbar.facade';
+
 
 @Component({
   selector: 'app-navbar',
   templateUrl: './navbar.component.html',
-  styleUrls: ['./navbar.component.scss']
+  styleUrls: ['./navbar.component.scss'],
+  providers: [NavbarFacade]
 })
 export class NavbarComponent implements OnInit {
 
@@ -22,21 +25,34 @@ export class NavbarComponent implements OnInit {
   error = '';
   public collections = null;
   public message: boolean;
+  public shoppingCartNumber: number;
 
   constructor(
     private authenticationService: AuthenticationService,
     private router: Router,
-    private collectionService: CollectionService
+    private collectionService: CollectionService,
+    private facade: NavbarFacade
   ) {
     this.loginOn = this.authenticationService.currentUserValue ? true : false;
   }
 
   ngOnInit(): void {
+    this.facade.selectedShoppingCart$.subscribe(
+      data => {
+        this.shoppingCartNumber = data.length;
+      }
+    );
+
     this.getProducts();
+
     this.authenticationService.currentMessage.pipe(debounce(() => timer(1000))).subscribe(message => {
       this.loginOn = !!this.authenticationService.currentUserValue ? true : false;
-      console.log('navbar message change', this.loginOn);
     });
+
+  }
+
+  public onClickIncrement() {
+    this.facade.Login();
   }
 
 
@@ -53,7 +69,6 @@ export class NavbarComponent implements OnInit {
       .subscribe(
         data => {
           if (data) {
-            console.log(data)
             this.collections = data;
             this.loading = false;
           }

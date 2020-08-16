@@ -5,10 +5,13 @@ import { first } from 'rxjs/operators';
 
 import { AuthenticationService } from '../_services/authentication.service';
 
+import { LoginFacade } from './login.facade';
+
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
-  styleUrls: ['./login.component.scss']
+  styleUrls: ['./login.component.scss'],
+  providers: [ LoginFacade ]
 })
 export class LoginComponent implements OnInit {
   loginForm: FormGroup;
@@ -16,13 +19,14 @@ export class LoginComponent implements OnInit {
   submitted = false;
   returnUrl: string;
   error = '';
-  message:string;
+  message: string;
 
   constructor(
     private formBuilder: FormBuilder,
     private route: ActivatedRoute,
     private router: Router,
-    private authenticationService: AuthenticationService
+    private authenticationService: AuthenticationService,
+    private facade: LoginFacade
   ) {
 
     // redirect to home if already logged in
@@ -46,8 +50,6 @@ export class LoginComponent implements OnInit {
 
   public onSubmit() {
     this.submitted = true;
-
-    
     // stop here if form is invalid
     if (this.loginForm.invalid) {
       return;
@@ -64,6 +66,7 @@ export class LoginComponent implements OnInit {
           this.error = error;
           this.loading = false;
         });
+    this.facade.Login();
   }
 
 }

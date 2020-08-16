@@ -3,7 +3,9 @@ import { Action } from '@ngrx/store';
 export enum ActionTypes {
     INCREMENT = '[Counter component] Increment',
     DECREMENT = '[Counter component] Decrement',
-    RESET = '[Counter component] Reset'
+    RESET = '[Counter component] Reset',
+    USER_LOGIN = '[Counter component] UserLoggedin',
+    ADD_PRODUCT = '[Product-page component] AddProduct'
 }
 
 export class Increment implements Action {
@@ -18,10 +20,21 @@ export class Reset implements Action {
     readonly type = ActionTypes.RESET;
 }
 
-export type Actions = Increment | Decrement | Reset;
+export class UserLogin implements Action {
+    readonly type = ActionTypes.USER_LOGIN;
+}
+
+export class AddProduct implements Action {
+    readonly type = ActionTypes.ADD_PRODUCT;
+    constructor(public payload: { product: any }) {}
+}
+
+export type Actions = Increment | Decrement | Reset | UserLogin | AddProduct;
 
 export const fromCounterActions = {
     Increment,
     Decrement,
-    Reset
+    Reset,
+    UserLogin,
+    AddProduct
 };

@@ -7,12 +7,15 @@ import { first } from 'rxjs/operators';
 import { CollectionService } from '../_services/collection.service';
 import { AuthenticationService } from '../_services/authentication.service';
 
+import { ProductPageFacade } from './product-page.facade';
+
 
 
 @Component({
   selector: 'app-product-page',
   templateUrl: './product-page.component.html',
-  styleUrls: ['./product-page.component.scss']
+  styleUrls: ['./product-page.component.scss'],
+  providers: [ProductPageFacade]
 })
 export class ProductPageComponent implements OnInit {
 
@@ -34,7 +37,8 @@ export class ProductPageComponent implements OnInit {
     private titleService: Title,
     private meta: Meta,
     private authenticationService: AuthenticationService,
-    private router: Router
+    private router: Router,
+    private facade: ProductPageFacade
   ) {
     this.loginOn = this.authenticationService.currentUserValue ? true : false;
   }
@@ -70,36 +74,10 @@ export class ProductPageComponent implements OnInit {
   }
 
   public addToBag() {
-    if(!this.loginOn) {
+    if (!this.loginOn) {
       this.router.navigate(['/login']);
     } else {
-      const id = this.authenticationService.currentUserValue.id.toString();
-      const nameOfProduct = this.product.name;
-      const urlOfProduct = this.product.url;
-      const descriptionOfProduct = this.product.description;
-      const detailedDescriptionOfProduct = this.product.detailedDescription;
-      const price = this.product.price;
-      const mainPhoto1 = this.product.mainPhoto1;
-      const mainPhoto2 = this.product.mainPhoto2;
-      const mainPhoto3 = this.product.mainPhoto3;
-      const mainPhoto4 = this.product.mainPhoto4;
-      const mainPhoto5 = this.product.mainPhoto5;
-      const mainPhoto6 = this.product.mainPhoto6;
-      const collectionUrl = this.product.collectionUrl;
-
-      this.authenticationService.addProductToCart(id, nameOfProduct, urlOfProduct, descriptionOfProduct, detailedDescriptionOfProduct, price, mainPhoto1, mainPhoto2, mainPhoto3, mainPhoto4, mainPhoto5, mainPhoto6, collectionUrl)
-      .pipe(first())
-      .subscribe(
-        data => {
-          if (data) {
-            this.loading = false;
-            this.product = data;
-          }
-        },
-        error => {
-          this.error = error;
-          this.loading = false;
-        });
+      this.facade.AddToBag(this.product);
       this.router.navigate(['/']);
     }
   }

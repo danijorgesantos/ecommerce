@@ -33,7 +33,6 @@ export class Main implements OnInit {
       .subscribe(
         data => {
           if (data) {
-            console.log(data.collectionUrl)
             this.collection = data;
             this.collectionUrl = data.collectionUrl;
             this.collectionProducts = data.collectionProducts;

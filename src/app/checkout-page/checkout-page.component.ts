@@ -5,10 +5,13 @@ import { first } from 'rxjs/operators';
 
 import { AuthenticationService } from '../_services/authentication.service';
 
+import { CheckoutPageFacade } from './checkout-page.facade';
+
 @Component({
   selector: 'app-checkout-page',
   templateUrl: './checkout-page.component.html',
-  styleUrls: ['./checkout-page.component.scss']
+  styleUrls: ['./checkout-page.component.scss'],
+  providers: [CheckoutPageFacade]
 })
 export class CheckoutPageComponent implements OnInit {
 
@@ -18,27 +21,36 @@ export class CheckoutPageComponent implements OnInit {
   returnUrl: string;
   error = '';
   public user = null;
-  public total = null;
-  public userProducts = null;
+  public userProducts = [];
+  public total = 0;
 
   constructor(
     private formBuilder: FormBuilder,
-    private route: ActivatedRoute,
-    private router: Router,
-    private authenticationService: AuthenticationService
+    private authenticationService: AuthenticationService,
+    private facade: CheckoutPageFacade
   ) {
     this.user = this.authenticationService.currentUserValue;
-   }
+  }
 
   ngOnInit() {
-    console.log(this.user);
-    this.userProducts = this.authenticationService.currentUserValue.cart;
+    console.log('user', this.user)
+    this.facade.selectedShoppingCart$.subscribe(
+      data => {
+        this.userProducts = data;
 
+        if (!!this.userProducts[0]) {
+          this.total = this.userProducts.reduce((sum, p) => parseInt( sum ) + parseInt( p.price ), 0);
+        }
+      }
+    );
+
+    //get data from loggedin user and put into the form
     this.loginForm = this.formBuilder.group({
-      name: ['', Validators.required],
-      email: ['', Validators.required],
+      name: [this.user.name, Validators.required],
+      email: [this.user.email, Validators.required],
       phone: ['', Validators.required],
       address: ['', Validators.required],
+      message: ['', Validators.required]
     });
 
   }
@@ -47,22 +59,22 @@ export class CheckoutPageComponent implements OnInit {
   get f() { return this.loginForm.controls; }
 
   public onSubmit() {
-  //   this.submitted = true;
+    //   this.submitted = true;
 
-  //   // stop here if form is invalid
-  //   if (this.loginForm.invalid) {
-  //     return;
-  //   }
+    //   // stop here if form is invalid
+    //   if (this.loginForm.invalid) {
+    //     return;
+    //   }
 
-  //   this.loading = true;
-  //   this.authenticationService.getUserInfo()
-  //     .subscribe(
-  //       data => {
-  //         console.log(data);
-  //       },
-  //       error => {
-  //         this.error = error;
-  //         this.loading = false;
-  //       });
-   }
+    //   this.loading = true;
+    //   this.authenticationService.getUserInfo()
+    //     .subscribe(
+    //       data => {
+    //         console.log(data);
+    //       },
+    //       error => {
+    //         this.error = error;
+    //         this.loading = false;
+    //       });
+  }
 }

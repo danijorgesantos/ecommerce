@@ -1,5 +1,4 @@
 import { createEntityAdapter, EntityAdapter, EntityState } from '@ngrx/entity';
-// import { Joke } from '../../models';
 
 export const featureAdapter: EntityAdapter<
   any
@@ -10,11 +9,13 @@ export const featureAdapter: EntityAdapter<
 });
 
 export interface State extends EntityState<any> {
-  count?: any;
+  loggedin?: boolean;
+  shoppingCart?: any;
 }
 
 export const initialState: State = featureAdapter.getInitialState(
   {
-    count: 0
+    loggedin: false,
+    shoppingCart: []
   }
 );
