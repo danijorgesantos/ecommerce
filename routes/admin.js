@@ -16,7 +16,7 @@ const User = require('../models/ClientUser');
 const Product = require('../models/Product');
 const Collection = require('../models/Collection');
 
-const Message = require('../models/Message');
+const Message = require('../models/Messages');
 
 // @route   admin/test
 // @desc    Tests users route
