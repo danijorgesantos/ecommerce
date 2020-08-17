@@ -66,12 +66,12 @@ router.post('/addProductToUserCart', (req, res) => {
         mainPhoto5: req.body.mainPhoto5,
         mainPhoto6: req.body.mainPhoto6,
     });
-    User.findById( req.body.id )
+    User.findById(req.body.id)
         .then(user => {
             const cart = user.cart
-            console.log('user.cart',cart)
+            console.log('user.cart', cart)
             cart.push(newProduct)
-            console.log('user.cart after push',cart)
+            console.log('user.cart after push', cart)
             User.findByIdAndUpdate(
                 req.body.id,
                 { cart: cart },
@@ -153,7 +153,10 @@ router.post('/addMessage', (req, res) => {
         message: req.body.message,
         products: req.body.products,
     });
-    newMessage.save().then(message => res.json(message)).catch(err => console.log(err));
+    newMessage
+        .save()
+        .then(message => res.json(message))
+        .catch(err => console.log(err));
 });
 
 
