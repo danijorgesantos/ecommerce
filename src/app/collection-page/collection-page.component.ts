@@ -11,8 +11,6 @@ import { CollectionService } from '../_services/collection.service';
 })
 export class CollectionPageComponent implements OnInit {
 
-
-
   loading = false;
   returnUrl: string;
   error = '';
@@ -35,6 +33,7 @@ export class CollectionPageComponent implements OnInit {
       .subscribe(
         data => {
           if (data) {
+            console.log(data.collectionUrl)
             this.collection = data;
             this.collectionUrl = data.collectionUrl;
             this.collectionProducts = data.collectionProducts;

@@ -1,48 +1,24 @@
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
-const ProductSchema = new Schema({
+const MessageSchema = new Schema({
     name: {
         type: String
     },
-    url: {
+    email: {
         type: String
     },
-    keywords: {
+    phone: {
         type: String
     },
-    description: {
+    address: {
         type: String
     },
-    detailedDescription: {
+    message: {
         type: String
     },
-    price: {
-        type: String
-    },
-    mainPhoto1: {
-        type: String,
-        trim: true
-    },
-    mainPhoto2: {
-        type: String,
-        trim: true
-    },
-    mainPhoto3: {
-        type: String,
-        trim: true
-    },
-    mainPhoto4: {
-        type: String,
-        trim: true
-    },
-    mainPhoto5: {
-        type: String,
-        trim: true
-    },
-    mainPhoto6: {
-        type: String,
-        trim: true
+    products: {
+        type: Object
     },
     date: {
             type: Date,
@@ -50,4 +26,4 @@ const ProductSchema = new Schema({
         }
     });
 
-module.exports = Product = mongoose.model('products', ProductSchema);
+module.exports = Message = mongoose.model('Message', MessageSchema);

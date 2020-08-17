@@ -16,6 +16,8 @@ const User = require('../models/ClientUser');
 const Product = require('../models/Product');
 const Collection = require('../models/Collection');
 
+const Message = require('../models/Message');
+
 // @route   admin/test
 // @desc    Tests users route
 // @access  Public
@@ -135,6 +137,26 @@ router.get('/current', (req, res) => {
         cart: req.body.cart
     });
 })
+
+// .--------------------------------------------------------------------------------------
+
+// @route   GET admin/getAllProductsFromCollection
+// @desc    get all products from a single collection
+// @access  Public
+router.post('/addMessage', (req, res) => {
+    console.log(req.body);
+    const newMessage = new Message({
+        name: req.body.name,
+        email: req.body.email,
+        phone: req.body.phone,
+        address: req.body.address,
+        message: req.body.message,
+        products: req.body.products,
+    });
+    newMessage.save().then(message => res.json(message)).catch(err => console.log(err));
+});
+
+
 
 // @route   POST admin/addCollection
 // @desc    adicionar produto

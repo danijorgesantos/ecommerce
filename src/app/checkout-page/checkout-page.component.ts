@@ -4,6 +4,7 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { first } from 'rxjs/operators';
 
 import { AuthenticationService } from '../_services/authentication.service';
+import { MessageService } from '../_services/message.service';
 
 import { CheckoutPageFacade } from './checkout-page.facade';
 
@@ -17,17 +18,19 @@ export class CheckoutPageComponent implements OnInit {
 
   loginForm: FormGroup;
   loading = false;
-  submitted = false;
   returnUrl: string;
   error = '';
   public user = null;
   public userProducts = [];
   public total = 0;
+  public products = {};
 
   constructor(
     private formBuilder: FormBuilder,
     private authenticationService: AuthenticationService,
-    private facade: CheckoutPageFacade
+    private facade: CheckoutPageFacade,
+    private router: Router,
+    private messageService: MessageService
   ) {
     this.user = this.authenticationService.currentUserValue;
   }
@@ -59,22 +62,22 @@ export class CheckoutPageComponent implements OnInit {
   get f() { return this.loginForm.controls; }
 
   public onSubmit() {
-    //   this.submitted = true;
-
-    //   // stop here if form is invalid
-    //   if (this.loginForm.invalid) {
-    //     return;
-    //   }
-
-    //   this.loading = true;
-    //   this.authenticationService.getUserInfo()
-    //     .subscribe(
-    //       data => {
-    //         console.log(data);
-    //       },
-    //       error => {
-    //         this.error = error;
-    //         this.loading = false;
-    //       });
+    this.messageService.addMessage(
+      this.f.name.value,
+      this.f.email.value,
+      this.f.phone.value,
+      this.f.address.value,
+      this.f.message.value,
+      this.products
+      )
+      .pipe(first())
+      .subscribe(
+        data => {
+          this.router.navigate(['/']);
+        },
+        error => {
+          this.error = error;
+          this.loading = false;
+        });
   }
 }
